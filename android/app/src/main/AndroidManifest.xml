@@ -9,6 +9,8 @@
         android:name="io.flutter.app.FlutterApplication"
         android:label="gastogo"
         android:icon="@mipmap/ic_launcher">
+        <meta-data android:name="com.google.ansdorin.geo.API_KEY"
+        android:value="AIzaSyDuDt1q8xpeK145Ngf5Y34INGt3XNHnZ_Q"/>
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
