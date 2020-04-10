@@ -90,23 +90,45 @@ class GastoGo extends StatelessWidget {
 class UserName extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.only(top: 100),
-      width: 50,
-      height: 50,
-      decoration: BoxDecoration(color: Colors.white, border: Border.all()),
+    return TextField(
+      obscureText: true,
+      decoration: InputDecoration(
+        border: OutlineInputBorder(),
+        labelText: 'Username',
+      ),
     );
   }
 }
 
+// class PassWord extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Container(
+//       padding: EdgeInsets.only(top: 100),
+//       width: 50,
+//       height: 50,
+//       decoration: BoxDecoration(color: Colors.white, border: Border.all()),
+//     );
+//   }
+// }
+
+// TextField(
+//   obscureText: true,
+//   decoration: InputDecoration(
+//     border: OutlineInputBorder(),
+//     labelText: 'Password',
+//   ),
+// )
+
 class PassWord extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.only(top: 100),
-      width: 50,
-      height: 50,
-      decoration: BoxDecoration(color: Colors.white, border: Border.all()),
+    return TextField(
+      obscureText: true,
+      decoration: InputDecoration(
+        border: OutlineInputBorder(),
+        labelText: 'Password',
+      ),
     );
   }
 }
@@ -210,81 +232,74 @@ class RegisterPage extends StatelessWidget {
         title: Text("Register"),
       ),
       body: Container(
-        padding: EdgeInsets.only(top:50),
+        padding: EdgeInsets.only(top: 50),
         child: Column(
-        
-        children: <Widget>[
-          
-          CirclePic(), 
-           Container(
-            padding:EdgeInsets.only(top:70),
-            child :
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              SizedBox(child: PassWord(), width: 150, height: 30),
-            ],
-          ),),
-          Container(
-            padding:EdgeInsets.only(top:20),
-            child :
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              SizedBox(child: PassWord(), width: 150, height: 30),
-            ],
-          ),),
-        Container(
-            padding:EdgeInsets.only(top:20),
-            child :
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              SizedBox(child: PassWord(), width: 150, height: 30),
-            ],
-          ),),
-        Container(
-            padding:EdgeInsets.only(top:20),
-            child :
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              SizedBox(child: PassWord(), width: 150, height: 30),
-            ],
-          ),),
-          Container(
-            padding: EdgeInsets.only(top:30),
-            child:
-           RaisedButton(
-             
-          child: Text("Register"),
-          color: Colors.transparent,
-          onPressed: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => BranchPage()));
-          },
-        ),)
-        ],
-      ),
+          children: <Widget>[
+            CirclePic(),
+            Container(
+              padding: EdgeInsets.only(top: 70),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  SizedBox(child: PassWord(), width: 150, height: 30),
+                ],
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.only(top: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  SizedBox(child: PassWord(), width: 150, height: 30),
+                ],
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.only(top: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  SizedBox(child: PassWord(), width: 150, height: 30),
+                ],
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.only(top: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  SizedBox(child: PassWord(), width: 150, height: 30),
+                ],
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.only(top: 30),
+              child: RaisedButton(
+                child: Text("Register"),
+                color: Colors.transparent,
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => BranchPage()));
+                },
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
 }
-class CirclePic extends StatelessWidget{
+
+class CirclePic extends StatelessWidget {
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return Container(
-      
-      width: 150.0,
-      height: 150.0,
-      decoration: new BoxDecoration(
-          shape: BoxShape.circle,
-          image: new DecorationImage(
-          fit: BoxFit.fill,
-          image: new NetworkImage(
-                 "https://i.imgur.com/BoN9kdC.png")
-                 )
-)
-    );
+        width: 150.0,
+        height: 150.0,
+        decoration: new BoxDecoration(
+            shape: BoxShape.circle,
+            image: new DecorationImage(
+                fit: BoxFit.fill,
+                image: new NetworkImage("https://i.imgur.com/BoN9kdC.png"))));
   }
-} 
+}
