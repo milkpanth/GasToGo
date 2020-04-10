@@ -172,12 +172,12 @@ class NewAccount extends StatelessWidget {
     return Scaffold(
       // appBar: AppBar(title: Text("Login Page"),),
       body: Center(
-        child: FlatButton(
+        child: OutlineButton(
           child: Text(
             "Create New Account",
-            style: TextStyle(color: Colors.blueAccent, fontSize: 11),
+            style: TextStyle(color: Colors.black, fontSize: 11),
           ),
-          color: Colors.white,
+            borderSide: BorderSide(color: Colors.grey, width: 1.0, style: BorderStyle.solid),
           onPressed: () {
             Navigator.push(context,
                 MaterialPageRoute(builder: (context) => RegisterPage()));
@@ -206,24 +206,24 @@ class NewAccount extends StatelessWidget {
 //   ));
 // }
 
-class BranchPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Second Page"),
-      ),
-      body: Center(
-        child: RaisedButton(
-          child: Text("Back to First Page"),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
-      ),
-    );
-  }
-}
+// class BranchPage extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text("Second Page"),
+//       ),
+//       body: Center(
+//         child: RaisedButton(
+//           child: Text("Back to First Page"),
+//           onPressed: () {
+//             Navigator.pop(context);
+//           },
+//         ),
+//       ),
+//     );
+//   }
+// }
 
 // class RegisterPage extends StatelessWidget {
 //   @override
