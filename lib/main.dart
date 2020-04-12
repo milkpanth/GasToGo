@@ -3,6 +3,7 @@ import 'package:gastogo/login.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:gastogo/registerpage.dart';
 
+
 void main() => runApp(GastoGo());
 
 //var headerSection = Container(height: 300, color: Colors.red,);
